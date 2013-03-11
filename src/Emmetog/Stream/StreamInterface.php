@@ -1,6 +1,6 @@
 <?php
 
-namespace Emmet\Stream;
+namespace Emmetog\Stream;
 
 interface StreamInterface {
     
