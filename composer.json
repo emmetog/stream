@@ -1,0 +1,15 @@
+{
+    "name": "emmetog/stream",
+    "description": "A library which makes interacting with streams easier",
+    "license": "GPL-3.0",
+    "keywords": [ "stream", "file", "directory", "tools" ],
+    "authors": [
+        {
+            "name": "Emmet O'Grady",
+            "email": "emmet789@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "Emmetog\\Stream\\": "src" }
+    }
+}
