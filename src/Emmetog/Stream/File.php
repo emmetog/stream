@@ -18,10 +18,9 @@ class File implements \Emmetog\Stream\StreamInterface
     /**
      * Opens a file resource
      * 
-     * @param type $filepath
+     * @param resource A resource to a file.
      */
-    public function openFile($filepath, $mode, $createFileIfNotExists = true,
-            $createDirIfNotExists = true)
+    public function openFile($filepath, $mode, $createFileIfNotExists = true, $createDirIfNotExists = true)
     {
         $fileExists = $this->fileExists($filepath);
 
@@ -33,8 +32,7 @@ class File implements \Emmetog\Stream\StreamInterface
             }
 
             // Check if the directory exists
-            $directory = substr($filepath, 0,
-                    strrpos($filepath, DIRECTORY_SEPARATOR));
+            $directory = substr($filepath, 0, strrpos($filepath, DIRECTORY_SEPARATOR));
             $directoryExists = $this->dirExists($directory);
 
             if (!$directoryExists)
@@ -51,8 +49,7 @@ class File implements \Emmetog\Stream\StreamInterface
         return fopen($filepath, $mode);
     }
 
-    public function mkdir($directoryPath, $permissionMode = '0700',
-            $recursive = true)
+    public function mkdir($directoryPath, $permissionMode = 0700, $recursive = true)
     {
 //        echo "start of mkdir, trying to create $directoryPath\n";
 
